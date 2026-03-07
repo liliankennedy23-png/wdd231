@@ -1,20 +1,29 @@
 [
-  {
-    "name": "Palmetto Coffee Co.",
-    "address": "123 Main St, Columbia, SC",
-    "phone": "803-555-1111",
-    "website": "https://palmettocoffee.com",
-    "image": "coffee.jpg",
-    "membership": 3,
-    "description": "Local artisan coffee shop."
-  },
-  {
-    "name": "Southern Tech Solutions",
-    "address": "456 Elm St, Columbia, SC",
-    "phone": "803-555-2222",
-    "website": "https://southerntech.com",
-    "image": "tech.jpg",
-    "membership": 2,
-    "description": "IT consulting and support."
-  }
-]
+        {
+            "name": "Palmetto Coffee Co.",
+            "address": "123 Main St, Columbia, SC",
+            "phone": "(803) 555-1010",
+            "website": "https://palmettocoffee.com",
+            "image": "coffee.jpg",
+            "membership": 3,
+            "description": "Local coffee shop serving handcrafted espresso drinks and pastries."
+        },
+        {
+            "name": "Southern Tech Solutions",
+            "address": "456 Elm St, Columbia, SC",
+            "phone": "(803) 555-2020",
+            "website": "https://southerntechsolutions.com",
+            "image": "tech.jpg",
+            "membership": 2,
+            "description": "Technology consulting and IT support services for local businesses."
+        },
+        {
+            "name": "Green Thumb Nursery",
+            "address": "789 Oak St, Columbia, SC",
+            "phone": "(803) 555-3030",
+            "website": "https://greenthumbnursery.com",
+            "image": "nursery.jpg",
+            "membership": 1,
+            "description": "Family-owned nursery offering a wide variety of plants and gardening supplies."
+        }
+    ]

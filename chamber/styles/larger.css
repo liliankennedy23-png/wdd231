@@ -1,11 +1,32 @@
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .navigation li {
+        margin: 0;
+    }
+
     #members.grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    nav ul {
+    #members.list section {
         display: flex;
-        justify-content: center;
-        gap: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
     }
+
+    #members.list img {
+        width: 120px;
+    }
+
 }
