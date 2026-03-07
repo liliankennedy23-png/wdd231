@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Palmetto Coffee Co.",
+    "address": "123 Main St, Columbia, SC",
+    "phone": "803-555-1111",
+    "website": "https://palmettocoffee.com",
+    "image": "coffee.jpg",
+    "membership": 3,
+    "description": "Local artisan coffee shop."
+  },
+  {
+    "name": "Southern Tech Solutions",
+    "address": "456 Elm St, Columbia, SC",
+    "phone": "803-555-2222",
+    "website": "https://southerntech.com",
+    "image": "tech.jpg",
+    "membership": 2,
+    "description": "IT consulting and support."
+  }
+]

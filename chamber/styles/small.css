@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #1c3d5a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li {
+    margin: 0.5rem 0;
+}
+
+#members.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#members.list {
+    display: block;
+}
+
+#members section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
