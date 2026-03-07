@@ -1,5 +1,5 @@
 body{
-font-family: 'Poppins', sans-serif;
+font-family:'Poppins',sans-serif;
 margin:0;
 background:#f4f6f9;
 }
@@ -32,6 +32,7 @@ font-size:1.5rem;
 background:none;
 border:none;
 color:white;
+cursor:pointer;
 }
 
 nav{
@@ -60,17 +61,14 @@ max-width:900px;
 margin:auto;
 }
 
-h1{
-margin-top:0;
-}
-
 .buttons{
+display:flex;
+gap:10px;
 margin:1rem 0;
 }
 
 .buttons button{
 padding:8px 14px;
-margin-right:5px;
 border:none;
 background:#2563eb;
 color:white;
@@ -114,9 +112,15 @@ padding:1rem;
 margin-top:2rem;
 }
 
+.social{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-bottom:10px;
+}
+
 .social a{
 color:white;
-margin:0 10px;
 text-decoration:none;
 }
 
