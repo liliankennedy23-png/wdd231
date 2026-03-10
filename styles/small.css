@@ -127,3 +127,11 @@ text-decoration:none;
 .social a:hover{
 text-decoration:underline;
 }
+/* Wayfinding for current page */
+
+nav a.active{
+background-color:#2563eb;
+color:white;
+font-weight:bold;
+border-radius:5px;
+}
