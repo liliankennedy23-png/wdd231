@@ -1,12 +1,13 @@
+javascript
+// URL for JSON data
 const url = "data/members.json";
 
+// Container for member cards
 const membersContainer = document.querySelector("#members");
 
-// FETCH MEMBERS USING ASYNC/AWAIT
+// FETCH MEMBER DATA
 async function getMembers() {
-
     try {
-
         const response = await fetch(url);
 
         if (!response.ok) {
@@ -18,18 +19,15 @@ async function getMembers() {
         displayMembers(data.members);
 
     } catch (error) {
-
         console.error("Error loading members:", error);
-
     }
-
 }
-
 
 // DISPLAY MEMBERS
 function displayMembers(members) {
 
-    membersContainer.innerHTML = ""; // prevents duplicates
+    // clear container first (prevents duplicates)
+    membersContainer.innerHTML = "";
 
     members.forEach(member => {
 
@@ -54,32 +52,25 @@ function displayMembers(members) {
         `;
 
         membersContainer.appendChild(card);
-
     });
-
 }
 
-
-// RUN FETCH
+// Run the fetch function
 getMembers();
 
 
-// GRID / LIST VIEW TOGGLE
+// GRID / LIST VIEW BUTTONS
 const gridButton = document.querySelector("#grid");
 const listButton = document.querySelector("#list");
 
 gridButton.addEventListener("click", () => {
-
     membersContainer.classList.add("grid");
     membersContainer.classList.remove("list");
-
 });
 
 listButton.addEventListener("click", () => {
-
     membersContainer.classList.add("list");
     membersContainer.classList.remove("grid");
-
 });
 
 
@@ -88,13 +79,10 @@ const menuButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
 
 menuButton.addEventListener("click", () => {
-
     navigation.classList.toggle("open");
-
 });
 
 
 // FOOTER INFORMATION
 document.querySelector("#year").textContent = new Date().getFullYear();
-
 document.querySelector("#lastModified").textContent = document.lastModified;
