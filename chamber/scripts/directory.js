@@ -1,5 +1,5 @@
 // URL for JSON data
-const url = "./members.json"; // make sure this path is correct
+const url = "./data/members.json"; // make sure this path is correct
 
 // Container for member cards
 const membersContainer = document.querySelector("#members");
