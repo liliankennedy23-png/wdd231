@@ -19,7 +19,7 @@
     margin: 0.2rem 0;
 }
 
-/* optional: subtle divider between list items */
+/* subtle divider between list items */
 #members.list section + section {
     border-top: 1px solid #ccc;
 }
@@ -41,13 +41,13 @@
 }
 
 /* =========================
-   MOBILE BUTTON
+   MOBILE MENU BUTTON
    ========================= */
 #menu {
     font-size: 1.8rem;
     background: none;
     border: none;
-    color: white;
+    color: #ffffff; /* visible on header background */
     cursor: pointer;
 }
 
@@ -66,7 +66,7 @@
     }
 
     #members.list section {
-        padding: 1rem 2rem; /* keep desktop spacing */
+        padding: 1rem 2rem;
     }
 
     #members.grid {

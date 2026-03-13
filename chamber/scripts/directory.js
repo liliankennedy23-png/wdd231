@@ -1,5 +1,5 @@
 // ================================
-// directory.js — Final Fixed Version
+// directory.js — Final Ready Version
 // ================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navigation.classList.toggle("open");
     });
 
-    // Close menu when clicking a link (mobile friendly)
+    // Close menu when clicking a link
     navigation.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", () => {
             navigation.classList.remove("open");
