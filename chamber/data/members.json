@@ -1,29 +1,75 @@
-[
-        {
-            "name": "Palmetto Coffee Co.",
-            "address": "123 Main St, Columbia, SC",
-            "phone": "(803) 555-1010",
-            "website": "https://palmettocoffee.com",
-            "image": "coffee.jpg",
-            "membership": 3,
-            "description": "Local coffee shop serving handcrafted espresso drinks and pastries."
-        },
-        {
-            "name": "Southern Tech Solutions",
-            "address": "456 Elm St, Columbia, SC",
-            "phone": "(803) 555-2020",
-            "website": "https://southerntechsolutions.com",
-            "image": "tech.jpg",
-            "membership": 2,
-            "description": "Technology consulting and IT support services for local businesses."
-        },
-        {
-            "name": "Green Thumb Nursery",
-            "address": "789 Oak St, Columbia, SC",
-            "phone": "(803) 555-3030",
-            "website": "https://greenthumbnursery.com",
-            "image": "nursery.jpg",
-            "membership": 1,
-            "description": "Family-owned nursery offering a wide variety of plants and gardening supplies."
-        }
-    ]
+{
+"members":[
+
+{
+"name":"Palmetto Coffee Co.",
+"address":"123 Main St, Columbia SC",
+"phone":"(803)555-1010",
+"website":"https://palmettocoffee.com",
+"image":"coffee.jpg",
+"membership":3,
+"description":"Local coffee shop serving handcrafted espresso drinks."
+},
+
+{
+"name":"Southern Tech Solutions",
+"address":"456 Elm St, Columbia SC",
+"phone":"(803)555-2020",
+"website":"https://southerntechsolutions.com",
+"image":"tech.jpg",
+"membership":2,
+"description":"Technology consulting and IT services."
+},
+
+{
+"name":"Green Thumb Nursery",
+"address":"789 Oak St, Columbia SC",
+"phone":"(803)555-3030",
+"website":"https://greenthumbnursery.com",
+"image":"nursery.jpg",
+"membership":1,
+"description":"Family owned nursery and garden center."
+},
+
+{
+"name":"Carolina Fitness",
+"address":"200 Wellness Blvd, Columbia SC",
+"phone":"(803)555-4040",
+"website":"https://carolinafitness.com",
+"image":"gym.jpg",
+"membership":2,
+"description":"Fitness center offering modern equipment and training."
+},
+
+{
+"name":"Midlands Bakery",
+"address":"22 Baker Street, Columbia SC",
+"phone":"(803)555-5050",
+"website":"https://midlandsbakery.com",
+"image":"bakery.jpg",
+"membership":1,
+"description":"Fresh baked breads and pastries every morning."
+},
+
+{
+"name":"Blue Sky Travel",
+"address":"45 Adventure Rd, Columbia SC",
+"phone":"(803)555-6060",
+"website":"https://blueskytravel.com",
+"image":"travel.jpg",
+"membership":3,
+"description":"Travel agency specializing in vacation planning."
+},
+
+{
+"name":"Elite Auto Repair",
+"address":"410 Service Rd, Columbia SC",
+"phone":"(803)555-7070",
+"website":"https://eliteautorepair.com",
+"image":"auto.jpg",
+"membership":1,
+"description":"Professional auto repair and maintenance services."
+}
+
+]
+}

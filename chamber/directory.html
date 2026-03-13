@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chamber Directory | WDD 231</title>
+<title>Columbia SC Chamber Directory | WDD 231</title>
 
-<meta name="description" content="Explore the Columbia South Carolina Chamber of Commerce directory featuring local businesses, services, and organizations supporting the community.">
+<meta name="description" content="Explore businesses that are members of the Columbia South Carolina Chamber of Commerce.">
 <meta name="author" content="Lillian Naftal">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Columbia SC Chamber Business Directory">
-<meta property="og:description" content="Discover businesses that are members of the Columbia South Carolina Chamber of Commerce and support the local business community.">
+<meta property="og:description" content="Discover local businesses that support the Columbia SC Chamber of Commerce.">
 <meta property="og:image" content="https://liliankennedy23-png.github.io/wdd231/chamber/images/logo.png">
 <meta property="og:url" content="https://liliankennedy23-png.github.io/wdd231/chamber/directory.html">
 
@@ -21,12 +22,15 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
 <!-- CSS -->
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/small.css">
 <link rel="stylesheet" href="styles/larger.css">
+
+<!-- JS -->
 <script src="scripts/directory.js" defer></script>
 
 </head>
@@ -34,31 +38,38 @@
 <body>
 
 <header>
+
 <nav>
+
 <button id="menu">☰</button>
 
 <ul class="navigation">
-<li><a href="#">Home</a></li>
-<li><a href="directory.html">Directory</a></li>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="directory.html" class="active">Directory</a></li>
 <li><a href="#">Discover</a></li>
 <li><a href="#">Join</a></li>
+
 </ul>
 
 </nav>
+
 </header>
 
 <main>
 
-<h1>Columbia Chamber of Commerce Directory</h1>
+<h1>Columbia Chamber of Commerce</h1>
+
 <h2>Business Directory</h2>
 
 <div class="view-buttons">
-<button id="grid">Grid</button>
-<button id="list">List</button>
+
+<button id="grid">Grid View</button>
+<button id="list">List View</button>
+
 </div>
 
-<section id="members" class="grid">
-</section>
+<section id="members" class="grid"></section>
 
 </main>
 
@@ -69,7 +80,8 @@
 <p>✉️ info@columbiascchamber.org</p>
 
 <p>&copy; <span id="year"></span> | Lillian Naftal | WDD 231</p>
-<p>Last Modification: <span id="lastModified"></span></p>
+
+<p>Last Modified: <span id="lastModified"></span></p>
 
 </footer>
 

@@ -1,73 +1,92 @@
 const url = "data/members.json";
+
 const membersContainer = document.querySelector("#members");
 
-async function getMembers() {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        displayMembers(data);
-    } catch (error) {
-        console.error("Error loading members:", error);
-    }
+async function getMembers(){
+
+try{
+
+const response = await fetch(url);
+
+const data = await response.json();
+
+displayMembers(data.members);
+
 }
 
-function displayMembers(members) {
-    members.forEach(member => {
+catch(error){
 
-        const card = document.createElement("section");
-        const name = document.createElement("h3");
-        const image = document.createElement("img");
-        const address = document.createElement("p");
-        const phone = document.createElement("p");
-        const website = document.createElement("a");
-        const description = document.createElement("p");
+console.error("Error loading members:", error);
 
-        name.textContent = member.name;
+}
 
-        image.setAttribute("src", `images/${member.image}`);
-        image.setAttribute("alt", `${member.name} business image`);
-        image.setAttribute("loading", "lazy");
-        image.setAttribute("width", "300");
+}
 
-        address.textContent = member.address;
-        phone.textContent = member.phone;
-        description.textContent = member.description;
+function displayMembers(members){
 
-        website.setAttribute("href", member.website);
-        website.setAttribute("target", "_blank");
-        website.textContent = "Visit Website";
+members.forEach(member=>{
 
-        card.appendChild(name);
-        card.appendChild(image);
-        card.appendChild(description);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(website);
+const card=document.createElement("section");
 
-        membersContainer.appendChild(card);
-    });
+card.innerHTML=`
+
+<h3>${member.name}</h3>
+
+<img src="images/${member.image}" alt="${member.name}" loading="lazy">
+
+<p>${member.description}</p>
+
+<p>${member.address}</p>
+
+<p>${member.phone}</p>
+
+<a href="${member.website}" target="_blank">Visit Website</a>
+
+`;
+
+membersContainer.appendChild(card);
+
+});
+
 }
 
 getMembers();
 
 
-// GRID / LIST VIEW TOGGLE
+// GRID / LIST BUTTONS
 
-const gridButton = document.querySelector("#grid");
-const listButton = document.querySelector("#list");
+const gridButton=document.querySelector("#grid");
+const listButton=document.querySelector("#list");
 
-gridButton.addEventListener("click", () => {
-    membersContainer.classList.add("grid");
-    membersContainer.classList.remove("list");
+gridButton.addEventListener("click",()=>{
+
+membersContainer.classList.add("grid");
+membersContainer.classList.remove("list");
+
 });
 
-listButton.addEventListener("click", () => {
-    membersContainer.classList.add("list");
-    membersContainer.classList.remove("grid");
+listButton.addEventListener("click",()=>{
+
+membersContainer.classList.add("list");
+membersContainer.classList.remove("grid");
+
 });
 
 
-// FOOTER INFO
+// MOBILE NAVIGATION
 
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent = document.lastModified;
+const menuButton=document.querySelector("#menu");
+const navigation=document.querySelector(".navigation");
+
+menuButton.addEventListener("click",()=>{
+
+navigation.classList.toggle("open");
+
+});
+
+
+// FOOTER YEAR
+
+document.querySelector("#year").textContent=new Date().getFullYear();
+
+document.querySelector("#lastModified").textContent=document.lastModified;
