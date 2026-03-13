@@ -7,8 +7,15 @@ justify-content:center;
 
 .navigation{
 display:flex;
-flex-direction:row;
 gap:2rem;
+}
+
+.navigation li{
+margin:0;
+}
+
+#menu{
+display:none;
 }
 
 #members.grid{
@@ -17,9 +24,15 @@ grid-template-columns:repeat(3,1fr);
 
 #members.list section{
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 text-align:left;
+padding:1rem 2rem;
+}
+
+#members.list img{
+width:120px;
+display:block;
 }
 
 }

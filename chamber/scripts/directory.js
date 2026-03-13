@@ -23,6 +23,20 @@ async function getMembers() {
     }
 }
 
+// Convert membership number to text
+function getMembership(level) {
+
+    if (level === 3) {
+        return "Gold Member";
+    }
+
+    if (level === 2) {
+        return "Silver Member";
+    }
+
+    return "Member";
+}
+
 // DISPLAY MEMBERS
 function displayMembers(members) {
 
@@ -46,7 +60,7 @@ function displayMembers(members) {
 
             <p><strong>Phone:</strong> ${member.phone}</p>
 
-            <p><strong>Membership Level:</strong> ${member.membership}</p>
+            <p><strong>Membership:</strong> ${getMembership(member.membership)}</p>
 
             <a href="${member.website}" target="_blank">Visit Website</a>
         `;
