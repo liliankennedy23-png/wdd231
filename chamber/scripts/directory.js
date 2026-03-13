@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // DISPLAY MEMBERS
     // ================================
     function displayMembers(members) {
-        // clear container first (prevents duplicates)
         membersContainer.innerHTML = "";
 
         members.forEach(member => {
@@ -70,9 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ================================
     // Run the fetch function
-    // ================================
     getMembers();
 
     // ================================
@@ -99,6 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menuButton.addEventListener("click", () => {
         navigation.classList.toggle("open");
+    });
+
+    // Close menu when clicking a link (mobile friendly)
+    navigation.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navigation.classList.remove("open");
+        });
     });
 
     // ================================
