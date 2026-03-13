@@ -2,91 +2,99 @@ const url = "data/members.json";
 
 const membersContainer = document.querySelector("#members");
 
-async function getMembers(){
+// FETCH MEMBERS USING ASYNC/AWAIT
+async function getMembers() {
 
-try{
+    try {
 
-const response = await fetch(url);
+        const response = await fetch(url);
 
-const data = await response.json();
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
 
-displayMembers(data.members);
+        const data = await response.json();
 
-}
+        displayMembers(data.members);
 
-catch(error){
+    } catch (error) {
 
-console.error("Error loading members:", error);
+        console.error("Error loading members:", error);
 
-}
-
-}
-
-function displayMembers(members){
-
-members.forEach(member=>{
-
-const card=document.createElement("section");
-
-card.innerHTML=`
-
-<h3>${member.name}</h3>
-
-<img src="images/${member.image}" alt="${member.name}" loading="lazy">
-
-<p>${member.description}</p>
-
-<p>${member.address}</p>
-
-<p>${member.phone}</p>
-
-<a href="${member.website}" target="_blank">Visit Website</a>
-
-`;
-
-membersContainer.appendChild(card);
-
-});
+    }
 
 }
 
+
+// DISPLAY MEMBERS
+function displayMembers(members) {
+
+    membersContainer.innerHTML = ""; // prevents duplicates
+
+    members.forEach(member => {
+
+        const card = document.createElement("section");
+
+        card.innerHTML = `
+            <h3>${member.name}</h3>
+
+            <img src="images/${member.image}" 
+                 alt="${member.name} business image" 
+                 loading="lazy">
+
+            <p>${member.description}</p>
+
+            <p><strong>Address:</strong> ${member.address}</p>
+
+            <p><strong>Phone:</strong> ${member.phone}</p>
+
+            <p><strong>Membership Level:</strong> ${member.membership}</p>
+
+            <a href="${member.website}" target="_blank">Visit Website</a>
+        `;
+
+        membersContainer.appendChild(card);
+
+    });
+
+}
+
+
+// RUN FETCH
 getMembers();
 
 
-// GRID / LIST BUTTONS
+// GRID / LIST VIEW TOGGLE
+const gridButton = document.querySelector("#grid");
+const listButton = document.querySelector("#list");
 
-const gridButton=document.querySelector("#grid");
-const listButton=document.querySelector("#list");
+gridButton.addEventListener("click", () => {
 
-gridButton.addEventListener("click",()=>{
-
-membersContainer.classList.add("grid");
-membersContainer.classList.remove("list");
-
-});
-
-listButton.addEventListener("click",()=>{
-
-membersContainer.classList.add("list");
-membersContainer.classList.remove("grid");
+    membersContainer.classList.add("grid");
+    membersContainer.classList.remove("list");
 
 });
 
+listButton.addEventListener("click", () => {
 
-// MOBILE NAVIGATION
-
-const menuButton=document.querySelector("#menu");
-const navigation=document.querySelector(".navigation");
-
-menuButton.addEventListener("click",()=>{
-
-navigation.classList.toggle("open");
+    membersContainer.classList.add("list");
+    membersContainer.classList.remove("grid");
 
 });
 
 
-// FOOTER YEAR
+// MOBILE NAVIGATION MENU
+const menuButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation");
 
-document.querySelector("#year").textContent=new Date().getFullYear();
+menuButton.addEventListener("click", () => {
 
-document.querySelector("#lastModified").textContent=document.lastModified;
+    navigation.classList.toggle("open");
+
+});
+
+
+// FOOTER INFORMATION
+document.querySelector("#year").textContent = new Date().getFullYear();
+
+document.querySelector("#lastModified").textContent = document.lastModified;
