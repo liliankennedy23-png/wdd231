@@ -1,13 +1,10 @@
 // ================================
-// directory.js — Final Ready Version
+// directory.js — FULLY FIXED VERSION
 // ================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // URL for JSON data
     const url = "./data/members.json";
-
-    // Container for member cards
     const membersContainer = document.querySelector("#members");
 
     // ================================
@@ -22,7 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const data = await response.json();
-            displayMembers(data.members);
+
+            // ✅ FIXED: use data directly (not data.members)
+            displayMembers(data);
 
         } catch (error) {
             console.error("Error loading members:", error);
@@ -30,83 +29,80 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ================================
-    // Convert membership number to text
-    // ================================
-    function getMembership(level) {
-        if (level === 3) return "Gold Member";
-        if (level === 2) return "Silver Member";
-        return "Member";
-    }
-
-    // ================================
     // DISPLAY MEMBERS
     // ================================
     function displayMembers(members) {
+
         membersContainer.innerHTML = "";
 
         members.forEach(member => {
+
             const card = document.createElement("section");
+            card.classList.add("member-card");
 
             card.innerHTML = `
                 <h3>${member.name}</h3>
 
-                <img src="images/${member.image.trim()}" 
-                     alt="${member.name} business image" 
+                <img src="${member.logo}" 
+                     alt="${member.name} logo" 
                      loading="lazy">
 
-                <p>${member.description}</p>
+                <p>${member.address}</p>
 
-                <p><strong>Address:</strong> ${member.address}</p>
+                <p>${member.phone}</p>
 
-                <p><strong>Phone:</strong> ${member.phone}</p>
+                <a href="${member.website}" target="_blank">
+                    Visit Website
+                </a>
 
-                <p><strong>Membership:</strong> ${getMembership(member.membership)}</p>
-
-                <a href="${member.website}" target="_blank">Visit Website</a>
+                <p><strong>${member.level} Member</strong></p>
             `;
 
             membersContainer.appendChild(card);
         });
     }
 
-    // Run the fetch function
     getMembers();
 
     // ================================
-    // GRID / LIST VIEW BUTTONS
+    // GRID / LIST VIEW
     // ================================
     const gridButton = document.querySelector("#grid");
     const listButton = document.querySelector("#list");
 
-    gridButton.addEventListener("click", () => {
-        membersContainer.classList.add("grid");
-        membersContainer.classList.remove("list");
-    });
+    if (gridButton && listButton) {
 
-    listButton.addEventListener("click", () => {
-        membersContainer.classList.add("list");
-        membersContainer.classList.remove("grid");
-    });
+        gridButton.addEventListener("click", () => {
+            membersContainer.classList.add("grid");
+            membersContainer.classList.remove("list");
+        });
+
+        listButton.addEventListener("click", () => {
+            membersContainer.classList.add("list");
+            membersContainer.classList.remove("grid");
+        });
+    }
 
     // ================================
-    // MOBILE NAVIGATION MENU
+    // HAMBURGER MENU
     // ================================
-    const menuButton = document.querySelector("#menu");
+    const menuButton = document.querySelector("#menu-button");
     const navigation = document.querySelector(".navigation");
 
-    menuButton.addEventListener("click", () => {
-        navigation.classList.toggle("open");
-    });
-
-    // Close menu when clicking a link
-    navigation.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            navigation.classList.remove("open");
+    if (menuButton && navigation) {
+        menuButton.addEventListener("click", () => {
+            navigation.classList.toggle("open");
         });
-    });
+
+        navigation.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navigation.classList.remove("open");
+            });
+        });
+    }
 
     // ================================
-    // FOOTER INFORMATION
+    // FOOTER
     // ================================
     document.querySelector("#year").textContent = new Date().getFullYear();
     document.querySelector("#lastModified").textContent = document.lastModified;
