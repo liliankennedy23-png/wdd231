@@ -1,14 +1,14 @@
-const apiKey = "YOUR_API_KEY";
+/* WEATHER */
+
+const apiKey = "f68b0fe5ed532c6d2742127870f4ffda";
 
 const lat = "34.0007";
 const lon = "-81.0348";
 
 const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
-/* WEATHER */
-
 async function getWeather(){
-
+try {
 const response = await fetch(url);
 const data = await response.json();
 
@@ -19,7 +19,6 @@ document.querySelector("#description").textContent =
 data.list[0].weather[0].description;
 
 const forecast = document.querySelector("#forecast");
-
 forecast.innerHTML = "";
 
 const filtered = data.list.filter(item =>
@@ -39,6 +38,9 @@ forecast.appendChild(div);
 
 });
 
+} catch (error){
+console.log("Weather error:", error);
+}
 }
 
 getWeather();
@@ -46,7 +48,7 @@ getWeather();
 /* SPOTLIGHTS */
 
 async function loadSpotlights(){
-
+try {
 const response = await fetch("data/members.json");
 const members = await response.json();
 
@@ -59,7 +61,6 @@ filtered.sort(() => 0.5 - Math.random());
 const selected = filtered.slice(0,3);
 
 const container = document.querySelector("#spotlight-container");
-
 container.innerHTML = "";
 
 selected.forEach(member => {
@@ -80,10 +81,23 @@ container.appendChild(card);
 
 });
 
+} catch (error){
+console.log("Spotlight error:", error);
+}
 }
 
 loadSpotlights();
 
-/* FOOTER YEAR */
+/* HAMBURGER MENU */
+
+const menuButton = document.querySelector("#menu-button");
+const nav = document.querySelector(".navigation");
+
+menuButton.addEventListener("click", () => {
+nav.classList.toggle("open");
+});
+
+/* FOOTER */
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
