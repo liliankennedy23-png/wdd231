@@ -35,9 +35,9 @@ display:flex;
 .navigation a{
 color:white;
 text-decoration:none;
-padding:5px;
 }
 
+/* LAYOUT */
 .join-layout{
 display:grid;
 gap:2rem;
@@ -57,7 +57,6 @@ border-radius:8px;
 label{
 display:flex;
 flex-direction:column;
-font-weight:500;
 }
 
 input, textarea, select{
@@ -87,7 +86,7 @@ text-align:center;
 border-radius:8px;
 box-shadow:0 2px 6px rgba(0,0,0,0.1);
 
-/* animation (EXTRA CREDIT) */
+/* animation */
 opacity:0;
 transform:translateY(20px);
 animation:fadeIn 1s forwards;
@@ -104,7 +103,7 @@ transform:translateY(0);
 }
 }
 
-/* MODALS */
+/* MODAL */
 dialog{
 border:none;
 border-radius:8px;

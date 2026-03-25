@@ -4,21 +4,26 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Join the Columbia Chamber of Commerce and grow your business.">
+<meta name="description" content="Join the Columbia Chamber of Commerce and grow your business through networking and local opportunities.">
 <meta name="author" content="Lillian Naftal">
 
 <title>Join | Columbia Chamber of Commerce</title>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Join the Columbia Chamber of Commerce">
+<meta property="og:description" content="Apply to join the Columbia Chamber and expand your business connections and opportunities.">
+<meta property="og:image" content="https://liliankennedy23-png.github.io/wdd231/chamber/images/hero.webp">
+<meta property="og:url" content="https://liliankennedy23-png.github.io/wdd231/chamber/join.html">
 
 <link rel="icon" href="images/favicon.ico">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/chamber.css">
+<link rel="stylesheet" href="styles/join.css">
 
 <script src="scripts/join.js" defer></script>
 
@@ -27,7 +32,7 @@
 <body>
 
 <header>
-<h1>Join the Chamber</h1>
+<h1>Join the Columbia Chamber of Commerce</h1>
 
 <button id="menu-button">☰</button>
 
@@ -40,114 +45,132 @@
 </nav>
 </header>
 
-<main>
+<main class="join-layout">
 
+<!-- FORM -->
+<section>
 <h2>Become a Member</h2>
-<p>Fill out the form below to join the Columbia Chamber of Commerce.</p>
 
-<form method="get" action="thankyou.html" class="join-form">
+<form method="get" action="thankyou.html">
 
-<!-- NAME -->
 <label>
-First Name:
-<input type="text" name="fname" required>
+First Name
+<input type="text" name="fname" required title="Enter your first name" autocomplete="given-name">
 </label>
 
 <label>
-Last Name:
-<input type="text" name="lname" required>
+Last Name
+<input type="text" name="lname" required title="Enter your last name" autocomplete="family-name">
 </label>
 
-<!-- TITLE -->
 <label>
-Job Title:
-<input type="text" name="title" pattern="[A-Za-z\s\-]{3,}">
+Organization Title
+<input type="text" name="orgtitle"
+title="At least 7 characters (letters, spaces, hyphens)"
+autocomplete="organization-title"
+pattern="[A-Za-z\\-\\s]{7,}">
 </label>
 
-<!-- EMAIL -->
 <label>
-Email:
-<input type="email" name="email" required placeholder="example@email.com">
+Email Address
+<input type="email" name="email" required title="Enter your email"
+autocomplete="email" placeholder="example@email.com">
 </label>
 
-<!-- PHONE -->
 <label>
-Phone:
-<input type="tel" name="phone" required>
+Mobile Phone
+<input type="tel" name="phone" required title="Enter your phone"
+autocomplete="tel">
 </label>
 
-<!-- BUSINESS -->
 <label>
-Business Name:
-<input type="text" name="business" required>
+Business Name
+<input type="text" name="business" required title="Enter business name"
+autocomplete="organization">
 </label>
 
-<!-- MEMBERSHIP -->
 <label>
-Membership Level:
-<select name="membership" required>
-<option value="">Select a level</option>
-<option value="NP">Non-Profit</option>
-<option value="Bronze">Bronze</option>
-<option value="Silver">Silver</option>
-<option value="Gold">Gold</option>
+Membership Level
+<select name="membership" required title="Select membership level">
+<option value="">Select Level</option>
+<option value="np">NP Membership</option>
+<option value="bronze">Bronze</option>
+<option value="silver">Silver</option>
+<option value="gold">Gold</option>
 </select>
 </label>
 
-<!-- DESCRIPTION -->
 <label>
-Business Description:
-<textarea name="description"></textarea>
+Business Description
+<textarea name="description" title="Describe your business"></textarea>
 </label>
 
-<!-- TIMESTAMP -->
-<input type="hidden" name="timestamp" id="timestamp">
+<input type="hidden" id="timestamp" name="timestamp">
 
-<!-- SUBMIT -->
-<input type="submit" value="Join Now" class="cta">
+<button type="submit" class="submit-btn">Apply Now</button>
 
 </form>
+</section>
 
 <!-- MEMBERSHIP CARDS -->
-
-<section class="membership-cards">
+<section class="cards">
 
 <h2>Membership Levels</h2>
 
 <div class="card">
 <h3>Non-Profit</h3>
-<p>No fee</p>
-<p>Community exposure</p>
+<a href="#" onclick="openModal('npModal')">View Benefits</a>
 </div>
 
 <div class="card">
 <h3>Bronze</h3>
-<p>Basic listing</p>
-<p>Networking opportunities</p>
+<a href="#" onclick="openModal('bronzeModal')">View Benefits</a>
 </div>
 
 <div class="card">
 <h3>Silver</h3>
-<p>Featured listings</p>
-<p>Event discounts</p>
+<a href="#" onclick="openModal('silverModal')">View Benefits</a>
 </div>
 
 <div class="card">
 <h3>Gold</h3>
-<p>Spotlight advertising</p>
-<p>Premium visibility</p>
+<a href="#" onclick="openModal('goldModal')">View Benefits</a>
 </div>
 
 </section>
 
 </main>
 
-<footer>
+<!-- MODALS -->
 
+<dialog id="npModal">
+<h3>NP Membership</h3>
+<p>No fee for nonprofits. Great exposure.</p>
+<button onclick="closeModal('npModal')">Close</button>
+</dialog>
+
+<dialog id="bronzeModal">
+<h3>Bronze Membership</h3>
+<p>Basic listing and networking.</p>
+<button onclick="closeModal('bronzeModal')">Close</button>
+</dialog>
+
+<dialog id="silverModal">
+<h3>Silver Membership</h3>
+<p>Includes advertising and discounts.</p>
+<button onclick="closeModal('silverModal')">Close</button>
+</dialog>
+
+<dialog id="goldModal">
+<h3>Gold Membership</h3>
+<p>Premium spotlight and visibility.</p>
+<button onclick="closeModal('goldModal')">Close</button>
+</dialog>
+
+<footer>
 <p>Columbia Chamber of Commerce</p>
 <p>&copy; <span id="year"></span></p>
 <p>Last Modified: <span id="lastModified"></span></p>
-
 </footer>
 
 </body>
