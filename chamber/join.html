@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Join the Columbia Chamber of Commerce and grow your business through networking and local opportunities.">
@@ -26,7 +25,6 @@
 <link rel="stylesheet" href="styles/join.css">
 
 <script src="scripts/join.js" defer></script>
-
 </head>
 
 <body>
@@ -114,27 +112,26 @@ Business Description
 
 <!-- MEMBERSHIP CARDS -->
 <section class="cards">
-
 <h2>Membership Levels</h2>
 
 <div class="card">
 <h3>Non-Profit</h3>
-<a href="#" onclick="openModal('npModal')">View Benefits</a>
+<a href="#" class="modal-link" data-modal="npModal">View Benefits</a>
 </div>
 
 <div class="card">
 <h3>Bronze</h3>
-<a href="#" onclick="openModal('bronzeModal')">View Benefits</a>
+<a href="#" class="modal-link" data-modal="bronzeModal">View Benefits</a>
 </div>
 
 <div class="card">
 <h3>Silver</h3>
-<a href="#" onclick="openModal('silverModal')">View Benefits</a>
+<a href="#" class="modal-link" data-modal="silverModal">View Benefits</a>
 </div>
 
 <div class="card">
 <h3>Gold</h3>
-<a href="#" onclick="openModal('goldModal')">View Benefits</a>
+<a href="#" class="modal-link" data-modal="goldModal">View Benefits</a>
 </div>
 
 </section>
@@ -142,29 +139,28 @@ Business Description
 </main>
 
 <!-- MODALS -->
-
 <dialog id="npModal">
 <h3>NP Membership</h3>
 <p>No fee for nonprofits. Great exposure.</p>
-<button onclick="closeModal('npModal')">Close</button>
+<button class="modal-close" data-modal="npModal">Close</button>
 </dialog>
 
 <dialog id="bronzeModal">
 <h3>Bronze Membership</h3>
 <p>Basic listing and networking.</p>
-<button onclick="closeModal('bronzeModal')">Close</button>
+<button class="modal-close" data-modal="bronzeModal">Close</button>
 </dialog>
 
 <dialog id="silverModal">
 <h3>Silver Membership</h3>
 <p>Includes advertising and discounts.</p>
-<button onclick="closeModal('silverModal')">Close</button>
+<button class="modal-close" data-modal="silverModal">Close</button>
 </dialog>
 
 <dialog id="goldModal">
 <h3>Gold Membership</h3>
 <p>Premium spotlight and visibility.</p>
-<button onclick="closeModal('goldModal')">Close</button>
+<button class="modal-close" data-modal="goldModal">Close</button>
 </dialog>
 
 <footer>
