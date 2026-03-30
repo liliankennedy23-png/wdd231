@@ -37,6 +37,17 @@ color:white;
 text-decoration:none;
 }
 
+.navigation a.active {
+    border-bottom: 3px solid #fff;
+    font-weight: bold;
+}
+
+/* WAYFINDING */
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #555;
+}
+
 /* LAYOUT */
 .join-layout{
 display:grid;
@@ -111,7 +122,7 @@ padding:1rem;
 }
 
 /* DESKTOP */
-@media (min-width:768px){
+@media (min-width:710px){
 
 .navigation{
 display:flex;
@@ -128,4 +139,10 @@ display:none;
 grid-template-columns:2fr 1fr;
 }
 
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
 }

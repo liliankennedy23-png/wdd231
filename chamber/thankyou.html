@@ -2,30 +2,47 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Thank You</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thank You | Columbia Chamber of Commerce</title>
+
+<meta name="description" content="Thank you for joining the Columbia Chamber of Commerce.">
+
+<link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/join.css">
+
+<script src="scripts/thankyou.js" defer></script>
 </head>
 
 <body>
 
+<header>
+<h1>Columbia Chamber of Commerce</h1>
+
+<button id="menu-button">☰</button>
+
+<nav>
+<ul class="navigation">
+<li><a href="index.html">Home</a></li>
+<li><a href="directory.html">Directory</a></li>
+<li><a href="join.html">Join</a></li>
+</ul>
+</nav>
+</header>
+
 <main>
 <h2>Thank You for Joining!</h2>
 
-<div id="results"></div>
+<p>We have received your application. Here are your details:</p>
 
+<div id="results"></div>
 </main>
 
-<script>
-const params = new URLSearchParams(window.location.search);
-
-document.getElementById("results").innerHTML = `
-<p><strong>Name:</strong> ${params.get("fname")} ${params.get("lname")}</p>
-<p><strong>Email:</strong> ${params.get("email")}</p>
-<p><strong>Phone:</strong> ${params.get("phone")}</p>
-<p><strong>Business:</strong> ${params.get("business")}</p>
-<p><strong>Date:</strong> ${params.get("timestamp")}</p>
-`;
-</script>
+<footer>
+<p>Columbia Chamber of Commerce</p>
+<p>&copy; <span id="year"></span></p>
+<p>Last Modified: <span id="lastModified"></span></p>
+</footer>
 
 </body>
 </html>
