@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Blog - Site Plan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Color Scheme */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333333;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #2a9d8f; /* Primary color for headings */
+        }
+
+        p, li {
+            color: #264653; /* Secondary color for text */
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .wireframe img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TravelQuest Blog - Site Plan</h1>
+
+    <section>
+        <h2>Site Name</h2>
+        <p><strong>TravelQuest Blog</strong></p>
+        <p>This name was selected because the site will focus on exploring destinations, sharing travel tips, and helping users plan their adventures. "Quest" conveys a sense of adventure and discovery.</p>
+        <p>Optional domain: <em>travelquestblog.com</em></p>
+    </section>
+
+    <section>
+        <h2>Site Purpose</h2>
+        <p>The site provides travel guides, destination reviews, itineraries, and tips for solo travelers, families, and adventure seekers. Users can also subscribe for newsletters, interact with blog posts, and access resources for planning trips.</p>
+    </section>
+
+    <section>
+        <h2>Scenarios</h2>
+        <ul>
+            <li>Which destinations are best for a budget-friendly 7-day trip?</li>
+            <li>How can I plan a family-friendly itinerary for Italy?</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Color Scheme</h2>
+        <ul>
+            <li><strong>#2a9d8f (Teal)</strong> – Primary headings, buttons, and accents.</li>
+            <li><strong>#264653 (Dark Blue-Grey)</strong> – Paragraph text, lists, and secondary accents.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Typography</h2>
+        <ul>
+            <li><strong>Roboto</strong> – Main body text for readability.</li>
+            <li><strong>Montserrat</strong> – Headings to create a modern and bold look.</li>
+            <li><strong>Open Sans</strong> – Optional for buttons or special callouts.</li>
+        </ul>
+    </section>
+
+    <section class="wireframe">
+        <h2>Wireframe</h2>
+        <p>Mobile View:</p>
+        <img src="mobile-wireframe.png" alt="Mobile wireframe layout sketch">
+        <p>Desktop/Tablet View:</p>
+        <img src="desktop-wireframe.png" alt="Desktop wireframe layout sketch">
+        <p>The wireframe sketches show a top navigation bar, hero image with call-to-action, featured blog posts, a newsletter subscription section, and a footer with contact information and social links.</p>
+    </section>
+
+    <section>
+        <h2>Testing and Validation</h2>
+        <ul>
+            <li>HTML Validation: <a href="https://validator.w3.org/">W3C Markup Validator</a></li>
+            <li>Accessibility: <a href="https://wave.webaim.org/">WAVE Web Accessibility Tool</a></li>
+            <li>Performance & SEO: <a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a></li>
+            <li>Color Contrast: <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a></li>
+        </ul>
+    </section>
+</body>
+</html>
