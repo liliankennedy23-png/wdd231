@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Our Area</title>
+    <meta name="description" content="Explore the local attractions, businesses, and culture of our area through the Chamber's Discover page.">
+    <meta name="author" content="Lillian Naftal">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Discover Our Area with the Chamber">
+    <meta property="og:description" content="Find out about local attractions, businesses, and culture in our area through the Chamber's Discover page.">
+    <meta property="og:image" content="https://liliankennedy23-png.github.io/wdd231/chamber/images/discover.jpg">
+    <meta property="og:url" content="https://liliankennedy23-png.github.io/wdd231/chamber/discover.html">
+    
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 641px)">
+
+  <!-- JS -->
+  <script type="module" src="scripts/discover.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Chamber Area</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="join.html">Join</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="visit-message"></div>
+    <section class="gallery" id="gallery"></section>
+
+    <!-- Extra credit: background audio -->
+    <audio id="background-audio" controls autoplay loop>
+      <source src="audio/city-sounds.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Chamber of Commerce</p>
+    last modified: <span id="last-modified"></span>
+
+  </footer>
+</body>
+</html>
