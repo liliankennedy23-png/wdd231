@@ -1,100 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Travel Blog - Site Plan</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Color Scheme */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f9f9f9;
-            color: #333333;
-            margin: 20px;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Myrtle Beach - Site Plan</title>
 
-        h1, h2 {
-            color: #2a9d8f; /* Primary color for headings */
-        }
+  <!-- Google Fonts (Extra Credit) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 
-        p, li {
-            color: #264653; /* Secondary color for text */
-        }
+  <style>
+    :root {
+      --primary: #1d3557;
+      --secondary: #457b9d;
+      --accent: #f1faee;
+    }
 
-        section {
-            margin-bottom: 30px;
-        }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--accent);
+      color: #333;
+      margin: 20px;
+      line-height: 1.6;
+    }
 
-        .wireframe img {
-            max-width: 100%;
-            height: auto;
-        }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+    }
 
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-    </style>
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .wireframe {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .wireframe {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>TravelQuest Blog - Site Plan</h1>
 
-    <section>
-        <h2>Site Name</h2>
-        <p><strong>TravelQuest Blog</strong></p>
-        <p>This name was selected because the site will focus on exploring destinations, sharing travel tips, and helping users plan their adventures. "Quest" conveys a sense of adventure and discovery.</p>
-        <p>Optional domain: <em>travelquestblog.com</em></p>
-    </section>
+  <h1>Explore Myrtle Beach - Site Plan</h1>
 
-    <section>
-        <h2>Site Purpose</h2>
-        <p>The site provides travel guides, destination reviews, itineraries, and tips for solo travelers, families, and adventure seekers. Users can also subscribe for newsletters, interact with blog posts, and access resources for planning trips.</p>
-    </section>
+  <!-- Site Name -->
+  <section>
+    <h2>Site Name</h2>
+    <p><strong>Explore Myrtle Beach</strong></p>
+    <p>
+      This name was chosen because the website focuses on highlighting attractions,
+      activities, and important information about Myrtle Beach for visitors and
+      potential business members. It clearly communicates the purpose of discovery
+      and tourism.
+    </p>
+  </section>
 
-    <section>
-        <h2>Scenarios</h2>
-        <ul>
-            <li>Which destinations are best for a budget-friendly 7-day trip?</li>
-            <li>How can I plan a family-friendly itinerary for Italy?</li>
-        </ul>
-    </section>
+  <!-- Site Purpose -->
+  <section>
+    <h2>Site Purpose</h2>
+    <p>
+      The purpose of this website is to promote Myrtle Beach by providing visitors
+      with information about local attractions, events, dining, and business
+      opportunities. It also serves as a resource for individuals interested in
+      joining the Chamber of Commerce.
+    </p>
+  </section>
 
-    <section>
-        <h2>Color Scheme</h2>
-        <ul>
-            <li><strong>#2a9d8f (Teal)</strong> – Primary headings, buttons, and accents.</li>
-            <li><strong>#264653 (Dark Blue-Grey)</strong> – Paragraph text, lists, and secondary accents.</li>
-        </ul>
-    </section>
+  <!-- Scenarios -->
+  <section>
+    <h2>Scenarios</h2>
+    <ul>
+      <li>What are the top attractions to visit in Myrtle Beach?</li>
+      <li>Where can I find local businesses to support or join?</li>
+      <li>What events are happening this week in the area?</li>
+    </ul>
+  </section>
 
-    <section>
-        <h2>Typography</h2>
-        <ul>
-            <li><strong>Roboto</strong> – Main body text for readability.</li>
-            <li><strong>Montserrat</strong> – Headings to create a modern and bold look.</li>
-            <li><strong>Open Sans</strong> – Optional for buttons or special callouts.</li>
-        </ul>
-    </section>
+  <!-- Color Scheme -->
+  <section>
+    <h2>Color Scheme</h2>
+    <ul>
+      <li><strong>#1d3557 (Dark Blue)</strong> – Headings, navigation, and important elements</li>
+      <li><strong>#457b9d (Blue)</strong> – Secondary accents, buttons, and highlights</li>
+      <li><strong>#f1faee (Light Background)</strong> – Page background for readability</li>
+    </ul>
+  </section>
 
-    <section class="wireframe">
-        <h2>Wireframe</h2>
-        <p>Mobile View:</p>
-        <img src="mobile-wireframe.png" alt="Mobile wireframe layout sketch">
-        <p>Desktop/Tablet View:</p>
-        <img src="desktop-wireframe.png" alt="Desktop wireframe layout sketch">
-        <p>The wireframe sketches show a top navigation bar, hero image with call-to-action, featured blog posts, a newsletter subscription section, and a footer with contact information and social links.</p>
-    </section>
+  <!-- Typography -->
+  <section>
+    <h2>Typography</h2>
+    <ul>
+      <li><strong>Montserrat</strong> – Used for headings to create a bold and modern look</li>
+      <li><strong>Open Sans</strong> – Used for body text for readability and clean design</li>
+    </ul>
+  </section>
 
-    <section>
-        <h2>Testing and Validation</h2>
-        <ul>
-            <li>HTML Validation: <a href="https://validator.w3.org/">W3C Markup Validator</a></li>
-            <li>Accessibility: <a href="https://wave.webaim.org/">WAVE Web Accessibility Tool</a></li>
-            <li>Performance & SEO: <a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a></li>
-            <li>Color Contrast: <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a></li>
-        </ul>
-    </section>
+  <!-- Wireframes -->
+  <section>
+    <h2>Wireframe</h2>
+
+    <div class="wireframe">
+      <div>
+        <h3>Mobile View</h3>
+        <img src="images/mobile-wireframe.png" alt="Mobile wireframe layout showing stacked content">
+        <p>
+          The mobile layout stacks content vertically with a simple navigation menu,
+          hero image, and content sections for easy scrolling.
+        </p>
+      </div>
+
+      <div>
+        <h3>Desktop View</h3>
+        <img src="images/desktop-wireframe.png" alt="Desktop wireframe layout showing grid structure">
+        <p>
+          The desktop layout expands into multiple columns with a navigation bar at
+          the top, a hero section, and content arranged in a grid for better use of space.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Credit Section -->
+  <section>
+    <h2>Additional Planning Considerations</h2>
+    <ul>
+      <li>Responsive design will be implemented using CSS Grid and Flexbox.</li>
+      <li>Accessibility will be considered using proper semantic HTML and alt text.</li>
+      <li>Performance optimization will include compressed images and efficient CSS.</li>
+      <li>SEO best practices will include proper headings and meta tags.</li>
+    </ul>
+  </section>
+
 </body>
 </html>
