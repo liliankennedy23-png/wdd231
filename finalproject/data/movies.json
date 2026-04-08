@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Inception",
+    "genre": "Sci-Fi",
+    "year": 2010,
+    "rating": "PG-13",
+    "director": "Christopher Nolan",
+    "cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt"],
+    "poster": "images/inception.jpg",
+    "synopsis": "A thief who steals corporate secrets through dream-sharing technology."
+  },
+  {
+    "title": "The Dark Knight",
+    "genre": "Action",
+    "year": 2008,
+    "rating": "PG-13",
+    "director": "Christopher Nolan",
+    "cast": ["Christian Bale", "Heath Ledger"],
+    "poster": "images/dark_knight.jpg",
+    "synopsis": "Batman faces the Joker, who threatens Gotham City."
+  },
+  {
+    "title": "Interstellar",
+    "genre": "Sci-Fi",
+    "year": 2014,
+    "rating": "PG-13",
+    "director": "Christopher Nolan",
+    "cast": ["Matthew McConaughey", "Anne Hathaway"],
+    "poster": "images/interstellar.jpg",
+    "synopsis": "Explorers travel through a wormhole in space to save humanity."
+  },
+  {
+    "title": "Parasite",
+    "genre": "Thriller",
+    "year": 2019,
+    "rating": "R",
+    "director": "Bong Joon-ho",
+    "cast": ["Song Kang-ho", "Lee Sun-kyun"],
+    "poster": "images/parasite.jpg",
+    "synopsis": "A poor family schemes to infiltrate a wealthy household."
+  },
+  {
+    "title": "The Matrix",
+    "genre": "Sci-Fi",
+    "year": 1999,
+    "rating": "R",
+    "director": "The Wachowskis",
+    "cast": ["Keanu Reeves", "Laurence Fishburne"],
+    "poster": "images/matrix.jpg",
+    "synopsis": "A hacker discovers reality is a simulation."
+  },
+  {
+    "title": "Avengers: Endgame",
+    "genre": "Action",
+    "year": 2019,
+    "rating": "PG-13",
+    "director": "Anthony & Joe Russo",
+    "cast": ["Robert Downey Jr.", "Chris Evans"],
+    "poster": "images/endgame.jpg",
+    "synopsis": "The Avengers attempt to reverse the damage caused by Thanos."
+  },
+  {
+    "title": "Joker",
+    "genre": "Drama",
+    "year": 2019,
+    "rating": "R",
+    "director": "Todd Phillips",
+    "cast": ["Joaquin Phoenix"],
+    "poster": "images/joker.jpg",
+    "synopsis": "A failed comedian descends into madness in Gotham City."
+  },
+  {
+    "title": "Titanic",
+    "genre": "Romance",
+    "year": 1997,
+    "rating": "PG-13",
+    "director": "James Cameron",
+    "cast": ["Leonardo DiCaprio", "Kate Winslet"],
+    "poster": "images/titanic.jpg",
+    "synopsis": "A romance blossoms aboard the doomed Titanic."
+  },
+  {
+    "title": "Avengers: Infinity War",
+    "genre": "Action",
+    "year": 2018,
+    "rating": "PG-13",
+    "director": "Anthony & Joe Russo",
+    "cast": ["Robert Downey Jr.", "Chris Hemsworth"],
+    "poster": "images/infinity_war.jpg",
+    "synopsis": "The Avengers attempt to stop Thanos from collecting all Infinity Stones."
+  },
+  {
+    "title": "The Godfather",
+    "genre": "Crime",
+    "year": 1972,
+    "rating": "R",
+    "director": "Francis Ford Coppola",
+    "cast": ["Marlon Brando", "Al Pacino"],
+    "poster": "images/godfather.jpg",
+    "synopsis": "The aging patriarch of an organized crime dynasty transfers control to his son."
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": "R",
+    "director": "Frank Darabont",
+    "cast": ["Tim Robbins", "Morgan Freeman"],
+    "poster": "images/shawshank.jpg",
+    "synopsis": "Two imprisoned men bond over decades and find redemption."
+  },
+  {
+    "title": "Forrest Gump",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": "PG-13",
+    "director": "Robert Zemeckis",
+    "cast": ["Tom Hanks"],
+    "poster": "images/forrest_gump.jpg",
+    "synopsis": "The story of a man with a low IQ who achieves extraordinary things."
+  },
+  {
+    "title": "The Lion King",
+    "genre": "Animation",
+    "year": 1994,
+    "rating": "G",
+    "director": "Roger Allers & Rob Minkoff",
+    "cast": ["Matthew Broderick", "James Earl Jones"],
+    "poster": "images/lion_king.jpg",
+    "synopsis": "A young lion prince flees his kingdom after the murder of his father."
+  },
+  {
+    "title": "Star Wars: A New Hope",
+    "genre": "Sci-Fi",
+    "year": 1977,
+    "rating": "PG",
+    "director": "George Lucas",
+    "cast": ["Mark Hamill", "Harrison Ford"],
+    "poster": "images/star_wars.jpg",
+    "synopsis": "Luke Skywalker joins the Rebel Alliance to fight the Empire."
+  },
+  {
+    "title": "Spider-Man: No Way Home",
+    "genre": "Action",
+    "year": 2021,
+    "rating": "PG-13",
+    "director": "Jon Watts",
+    "cast": ["Tom Holland", "Zendaya"],
+    "poster": "images/spiderman.jpg",
+    "synopsis": "Spider-Man faces multiverse villains after his identity is revealed."
+  }
+]
