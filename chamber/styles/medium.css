@@ -1,4 +1,13 @@
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 641px) {
+
+  nav {
+    display: block;
+  }
+
+  #menuBtn {
+    display: none;
+  }
+
   .gallery {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -8,9 +17,9 @@
       "card7 card8";
   }
 
-  .card figure img:hover {
+  .card img:hover {
     transform: scale(1.05);
-    filter: brightness(1.2);
+    transition: 0.3s;
   }
 }
 

@@ -26,12 +26,18 @@
 
   <!-- JS -->
   <script type="module" src="scripts/discover.js"></script>
+  <script src="scripts/menu.js" defer></script>
 </head>
+
 <body>
 
 <header>
   <h1>Discover Our Chamber Area</h1>
-  <nav>
+
+      <!-- Hamburger -->
+  <button id="menuBtn">☰</button>
+
+  <nav id="navMenu">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="discover.html" class="active">Discover</a></li>
@@ -44,7 +50,7 @@
   <div id="visit-message"></div>
 
   <section class="gallery" id="gallery">
-    <h2 class="visually-hidden">Gallery of Local Attractions</h2>
+    <h2>Gallery of Local Attractions</h2>
   </section>
 
   <!-- Extra credit: background audio -->
