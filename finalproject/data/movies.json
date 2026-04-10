@@ -1,0 +1,17 @@
+[
+  {"title":"Inception","year":2010,"genre":"Sci-Fi","rating":9,"director":"Nolan"},
+  {"title":"Interstellar","year":2014,"genre":"Sci-Fi","rating":9,"director":"Nolan"},
+  {"title":"Batman","year":2008,"genre":"Action","rating":10,"director":"Nolan"},
+  {"title":"Avatar","year":2009,"genre":"Fantasy","rating":8,"director":"Cameron"},
+  {"title":"Titanic","year":1997,"genre":"Romance","rating":9,"director":"Cameron"},
+  {"title":"Joker","year":2019,"genre":"Drama","rating":8,"director":"Phillips"},
+  {"title":"Matrix","year":1999,"genre":"Sci-Fi","rating":10,"director":"Wachowski"},
+  {"title":"Gladiator","year":2000,"genre":"Action","rating":9,"director":"Scott"},
+  {"title":"Up","year":2009,"genre":"Animation","rating":8,"director":"Docter"},
+  {"title":"Frozen","year":2013,"genre":"Animation","rating":7,"director":"Buck"},
+  {"title":"Coco","year":2017,"genre":"Animation","rating":9,"director":"Unkrich"},
+  {"title":"Dune","year":2021,"genre":"Sci-Fi","rating":9,"director":"Villeneuve"},
+  {"title":"Her","year":2013,"genre":"Drama","rating":8,"director":"Jonze"},
+  {"title":"Gravity","year":2013,"genre":"Sci-Fi","rating":8,"director":"Cuarón"},
+  {"title":"The Prestige","year":2006,"genre":"Mystery","rating":9,"director":"Nolan"}
+]

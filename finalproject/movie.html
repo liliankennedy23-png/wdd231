@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Movies</title>
+  <meta name="description" content="Browse 15+ movies with details and ratings.">
+
+  <link rel="stylesheet" href="styles/final.css">
+
+  <script type="module" src="scripts/movie.js"></script>
+  <script type="module" src="scripts/modal.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Movies</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="form.html">Form</a>
+    <a href="about.html">About</a>
+    <a href="attributions.html">Attributions</a>
+  </nav>
+</header>
+
+<main>
+  <section id="movieGrid" class="grid"></section>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <span id="closeModal">×</span>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
