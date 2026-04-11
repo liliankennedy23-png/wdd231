@@ -3,40 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Discover Our Chamber Area</title>
-
   <meta name="description" content="Explore local attractions, businesses, and culture in our area through the Chamber's Discover page.">
   <meta name="author" content="Lillian Naftal">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Discover Our Chamber Area – Local Attractions & Businesses and Culture with the Chamber of Commerce in Columbia, South Carolina.">
-  <meta property="og:description" content="Learn about local attractions and businesses.">
+  <meta property="og:title" content="Discover Our Chamber Area – Local Attractions & Businesses">
+  <meta property="og:description" content="Learn about the unique attractions, thriving businesses, and cultural highlights in our area.">
   <meta property="og:image" content="https://liliankennedy23-png.github.io/wdd231/chamber/images/discover.jpg">
   <meta property="og:url" content="https://liliankennedy23-png.github.io/wdd231/chamber/discover.html">
 
   <link rel="icon" href="images/favicon.ico">
 
-<!-- Google Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 641px)">
 
+  <!-- JS -->
   <script type="module" src="scripts/discover.js"></script>
-  <script src="scripts/menu.js" defer></script>
 </head>
-
 <body>
 
 <header>
   <h1>Discover Our Chamber Area</h1>
-
-  <button id="menuBtn">☰</button>
-
-  <nav id="navMenu">
+  <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="discover.html" class="active">Discover</a></li>
@@ -46,40 +41,31 @@
 </header>
 
 <main>
-
   <div id="visit-message"></div>
 
-  <section aria-labelledby="gallery-title">
-    <h2 id="gallery-title">Gallery of Local Attractions</h2>
-    <div class="gallery" id="gallery"></div>
+  <section class="gallery" id="gallery">
+    <h2 class="visually-hidden">Gallery of Local Attractions</h2>
   </section>
 
+  <!-- Extra credit: background audio -->
   <div id="audio-container">
     <button id="play-audio">Play Background Audio</button>
-
     <audio id="background-audio" loop>
       <source src="audio/city-sounds.ogg" type="audio/ogg">
       <source src="audio/city-sounds.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
   </div>
-
 </main>
 
-<!-- MODAL -->
+<!-- Modal for Learn More -->
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-
-    <h2 id="modal-title"></h2>
-
-    <img id="modal-image"
-         src="images/placeholder.webp"
-         alt="Attraction image"
-         loading="lazy">
-
-    <address id="modal-address"></address>
-    <p id="modal-description"></p>
+    <h2 id="modal-title">Attraction Name</h2>
+    <img id="modal-image" src="images/placeholder.webp" alt="Attraction Image" loading="lazy">
+    <address id="modal-address">123 Main St</address>
+    <p id="modal-description">Description of the attraction.</p>
   </div>
 </div>
 
