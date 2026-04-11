@@ -1,27 +1,95 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Form Results</title>
+  <title>Movie Form - Movie Explorer</title>
+
+  <meta name="description" content="Submit your favorite movies using this form. Movie Explorer collects and displays user movie preferences dynamically.">
+  <meta name="author" content="Lillian Naftal">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Submit Your Favorite Movies">
+  <meta property="og:description" content="Use this form to share your favorite movies and see them displayed dynamically.">
+  <meta property="og:image" content="https://liliankennedy23-png.github.io/wdd231/finalproject/images/og-image.jpg">
+  <meta property="og:url" content="https://liliankennedy23-png.github.io/wdd231/finalproject/form.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/final.css">
+
+  <!-- JS -->
+  <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
 
-<h1>Form Submission</h1>
+<header>
+  <nav>
+    <button id="menuBtn">☰</button>
+    <ul id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="form.html" class="active">Form</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="attributions.html">Attributions</a></li>
+    </ul>
+  </nav>
+</header>
 
-<div id="results"></div>
+<main>
+  <h1>Submit Your Favorite Movie</h1>
 
-<script>
-const params = new URLSearchParams(window.location.search);
+  <form method="get" action="thankyou.html">
+    
+    <label>
+      Your Name:
+      <input type="text" name="name" required>
+    </label>
 
-let output = "";
-for (const [key, value] of params) {
-  output += `<p><strong>${key}:</strong> ${value}</p>`;
-}
+    <label>
+      Movie Title:
+      <input type="text" name="movie" required>
+    </label>
 
-document.getElementById("results").innerHTML = output;
-</script>
+    <label>
+      Genre:
+      <select name="genre" required>
+        <option value="">Select</option>
+        <option>Action</option>
+        <option>Comedy</option>
+        <option>Drama</option>
+        <option>Horror</option>
+        <option>Sci-Fi</option>
+      </select>
+    </label>
+
+    <label>
+      Rating (1–10):
+      <input type="number" name="rating" min="1" max="10" required>
+    </label>
+
+    <label>
+      Comments:
+      <textarea name="comments"></textarea>
+    </label>
+
+    <button type="submit">Submit</button>
+
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2026 Movie Explorer - Lillian Naftal</p>
+</footer>
 
 </body>
 </html>

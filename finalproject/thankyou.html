@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Thank You - Movie Explorer</title>
+  <meta name="description" content="Thank you for submitting your movie!">
+  <meta name="author" content="Lillian Naftal">
+
+  <link rel="stylesheet" href="styles/final.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Thank You!</h1>
+  <p id="results"></p>
+</main>
+
+<footer>
+  <p>&copy; 2026 Movie Explorer</p>
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("results").textContent =
+  `Thanks ${params.get("name")}! You submitted "${params.get("movie")}" (${params.get("genre")}) with a rating of ${params.get("rating")}.`;
+</script>
+
+</body>
+</html>

@@ -50,3 +50,9 @@ button {
   padding: 20px;
   width: 50%;
 }
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
