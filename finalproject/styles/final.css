@@ -87,3 +87,10 @@ nav ul {
     display: flex;
   }
 }
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
