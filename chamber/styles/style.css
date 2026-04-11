@@ -4,6 +4,7 @@ body {
   background: #f9f9f9;
 }
 
+/* HEADER */
 header {
   background: #003366;
   color: white;
@@ -11,11 +12,12 @@ header {
   padding: 1rem;
 }
 
-/* HAMBURGER MENU */
+/* NAV */
 #menuBtn {
   display: block;
   margin: 0 auto;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 nav {
@@ -38,6 +40,13 @@ nav a {
   text-decoration: none;
 }
 
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+  border-bottom: 2px solid white;
+}
+
+/* MAIN */
 main {
   padding: 1rem;
 }
@@ -49,10 +58,12 @@ main {
   margin-bottom: 1rem;
 }
 
-/* GRID AREAS MOBILE */
+/* =========================
+   MOBILE GRID (ONLY BASE)
+========================= */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   grid-template-areas:
     "card1"
     "card2"
@@ -62,9 +73,9 @@ main {
     "card6"
     "card7"
     "card8";
-  gap: 1rem;
 }
 
+/* CARDS */
 .card {
   background: white;
   padding: 1rem;
@@ -72,8 +83,12 @@ main {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Hover ONLY desktop */
 .card img {
   width: 100%;
   height: auto;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
 }

@@ -2,30 +2,36 @@ import { itemsOfInterest } from './discover-data.mjs';
 
 const gallery = document.getElementById('gallery');
 
+/* BUILD CARDS */
 itemsOfInterest.forEach((item, index) => {
   const card = document.createElement('article');
   card.classList.add('card');
 
-  // Set grid area for CSS layout
+  // REQUIRED: grid-area assignment
   card.style.gridArea = `card${index + 1}`;
 
   card.innerHTML = `
     <h3>${item.name}</h3>
     <figure>
-      <img src="images/${item.image}" 
-           alt="${item.name}" 
-           loading="lazy" 
-           width="300" height="200">
+      <img src="images/${item.image}"
+           alt="${item.name}"
+           loading="lazy"
+           width="300"
+           height="200">
     </figure>
     <address>${item.address}</address>
     <p>${item.description}</p>
-    <button>Learn More</button>
+    <button aria-label="Learn more about ${item.name}">
+      Learn More
+    </button>
   `;
 
   gallery.appendChild(card);
 });
 
-// LocalStorage message
+/* =========================
+   LOCAL STORAGE MESSAGE
+========================= */
 const visitMessage = document.getElementById('visit-message');
 const lastVisit = localStorage.getItem('lastVisit');
 const now = Date.now();
@@ -34,22 +40,31 @@ if (!lastVisit) {
   visitMessage.textContent = "Welcome! Let us know if you have questions.";
 } else {
   const days = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+
   visitMessage.textContent =
-    days === 0 ? "Back so soon!" : `You last visited ${days} day(s) ago.`;
+    days === 0
+      ? "Back so soon!"
+      : `You last visited ${days} day(s) ago.`;
 }
 
 localStorage.setItem('lastVisit', now);
 
-// Audio
+/* =========================
+   AUDIO BUTTON
+========================= */
 const audio = document.getElementById('background-audio');
 const btn = document.getElementById('play-audio');
 
-audio.play().catch(() => btn.style.display = "inline-block");
+audio.play().catch(() => {
+  btn.style.display = "inline-block";
+});
 
 btn.addEventListener("click", () => {
   audio.play();
   btn.style.display = "none";
 });
 
-// Footer date
+/* =========================
+   FOOTER DATE
+========================= */
 document.getElementById("last-modified").textContent = document.lastModified;

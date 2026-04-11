@@ -16,14 +16,10 @@
       "card5 card6"
       "card7 card8";
   }
-
-  .card img:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-  }
 }
 
 @media (min-width: 1025px) {
+
   .gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
