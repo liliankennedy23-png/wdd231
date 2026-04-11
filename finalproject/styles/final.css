@@ -56,3 +56,34 @@ button {
   gap: 2rem;
   flex-wrap: wrap;
 }
+
+.about-container img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+#menu-btn {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  #nav-links.open {
+    display: flex;
+  }
+}

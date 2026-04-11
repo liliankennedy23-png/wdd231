@@ -1,17 +1,152 @@
 [
-  {"title":"Inception","year":2010,"genre":"Sci-Fi","rating":9,"director":"Nolan"},
-  {"title":"Interstellar","year":2014,"genre":"Sci-Fi","rating":9,"director":"Nolan"},
-  {"title":"Batman","year":2008,"genre":"Action","rating":10,"director":"Nolan"},
-  {"title":"Avatar","year":2009,"genre":"Fantasy","rating":8,"director":"Cameron"},
-  {"title":"Titanic","year":1997,"genre":"Romance","rating":9,"director":"Cameron"},
-  {"title":"Joker","year":2019,"genre":"Drama","rating":8,"director":"Phillips"},
-  {"title":"Matrix","year":1999,"genre":"Sci-Fi","rating":10,"director":"Wachowski"},
-  {"title":"Gladiator","year":2000,"genre":"Action","rating":9,"director":"Scott"},
-  {"title":"Up","year":2009,"genre":"Animation","rating":8,"director":"Docter"},
-  {"title":"Frozen","year":2013,"genre":"Animation","rating":7,"director":"Buck"},
-  {"title":"Coco","year":2017,"genre":"Animation","rating":9,"director":"Unkrich"},
-  {"title":"Dune","year":2021,"genre":"Sci-Fi","rating":9,"director":"Villeneuve"},
-  {"title":"Her","year":2013,"genre":"Drama","rating":8,"director":"Jonze"},
-  {"title":"Gravity","year":2013,"genre":"Sci-Fi","rating":8,"director":"Cuarón"},
-  {"title":"The Prestige","year":2006,"genre":"Mystery","rating":9,"director":"Nolan"}
+  {
+    "id": 1,
+    "title": "Inception",
+    "year": 2010,
+    "genre": "Sci-Fi",
+    "rating": 8.8,
+    "director": "Christopher Nolan",
+    "image": "images/inception.webp",
+    "description": "A thief who steals secrets through dream-sharing technology is given a final job."
+  },
+  {
+    "id": 2,
+    "title": "Interstellar",
+    "year": 2014,
+    "genre": "Sci-Fi",
+    "rating": 8.6,
+    "director": "Christopher Nolan",
+    "image": "images/interstellar.webp",
+    "description": "A team travels through a wormhole in search of a new home for humanity."
+  },
+  {
+    "id": 3,
+    "title": "Avatar",
+    "year": 2009,
+    "genre": "Action",
+    "rating": 7.8,
+    "director": "James Cameron",
+    "image": "images/avatar.webp",
+    "description": "A marine on an alien planet becomes torn between two worlds."
+  },
+  {
+    "id": 4,
+    "title": "The Dark Knight",
+    "year": 2008,
+    "genre": "Action",
+    "rating": 9.0,
+    "director": "Christopher Nolan",
+    "image": "images/darkknight.webp",
+    "description": "Batman faces the Joker in Gotham City's greatest threat."
+  },
+  {
+    "id": 5,
+    "title": "Spider-Man: No Way Home",
+    "year": 2021,
+    "genre": "Action",
+    "rating": 8.2,
+    "director": "Jon Watts",
+    "image": "images/spiderman.webp",
+    "description": "Spider-Man's identity is revealed, causing multiverse chaos."
+  },
+  {
+    "id": 6,
+    "title": "Titanic",
+    "year": 1997,
+    "genre": "Drama",
+    "rating": 7.9,
+    "director": "James Cameron",
+    "image": "images/titanic.webp",
+    "description": "A love story unfolds aboard the doomed Titanic ship."
+  },
+  {
+    "id": 7,
+    "title": "Joker",
+    "year": 2019,
+    "genre": "Drama",
+    "rating": 8.4,
+    "director": "Todd Phillips",
+    "image": "images/joker.webp",
+    "description": "The origin story of Gotham's infamous villain."
+  },
+  {
+    "id": 8,
+    "title": "Frozen",
+    "year": 2013,
+    "genre": "Animation",
+    "rating": 7.4,
+    "director": "Chris Buck",
+    "image": "images/frozen.webp",
+    "description": "A princess learns to control her ice powers."
+  },
+  {
+    "id": 9,
+    "title": "Toy Story",
+    "year": 1995,
+    "genre": "Animation",
+    "rating": 8.3,
+    "director": "John Lasseter",
+    "image": "images/toystory.webp",
+    "description": "Toys come alive when humans are not around."
+  },
+  {
+    "id": 10,
+    "title": "The Avengers",
+    "year": 2012,
+    "genre": "Action",
+    "rating": 8.0,
+    "director": "Joss Whedon",
+    "image": "images/avengers.webp",
+    "description": "Earth's heroes unite to stop Loki."
+  },
+  {
+    "id": 11,
+    "title": "Black Panther",
+    "year": 2018,
+    "genre": "Action",
+    "rating": 7.3,
+    "director": "Ryan Coogler",
+    "image": "images/blackpanther.webp",
+    "description": "T'Challa returns home to rule Wakanda."
+  },
+  {
+    "id": 12,
+    "title": "Finding Nemo",
+    "year": 2003,
+    "genre": "Animation",
+    "rating": 8.1,
+    "director": "Andrew Stanton",
+    "image": "images/nemo.webp",
+    "description": "A father searches the ocean for his son."
+  },
+  {
+    "id": 13,
+    "title": "The Matrix",
+    "year": 1999,
+    "genre": "Sci-Fi",
+    "rating": 8.7,
+    "director": "Wachowskis",
+    "image": "images/matrix.webp",
+    "description": "A hacker discovers reality is a simulation."
+  },
+  {
+    "id": 14,
+    "title": "Shrek",
+    "year": 2001,
+    "genre": "Comedy",
+    "rating": 7.9,
+    "director": "Andrew Adamson",
+    "image": "images/shrek.webp",
+    "description": "An ogre goes on a rescue mission."
+  },
+  {
+    "id": 15,
+    "title": "Deadpool",
+    "year": 2016,
+    "genre": "Comedy",
+    "rating": 8.0,
+    "director": "Tim Miller",
+    "image": "images/deadpool.webp",
+    "description": "A wise-cracking mercenary gains healing powers."
+  }
 ]
