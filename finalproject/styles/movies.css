@@ -1,0 +1,35 @@
+/* Netflix-style movie cards */
+
+.movie-card {
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  padding: 0.5rem;
+}
+
+.movie-card p {
+  padding: 0 0.5rem;
+}
+
+.details-btn {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: crimson;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}

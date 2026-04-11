@@ -1,46 +1,45 @@
-const grid = document.getElementById("movieGrid");
-const modal = document.getElementById("modal");
-const modalContent = document.getElementById("modalContent");
+const grid = document.querySelector("#movieGrid");
+const modal = document.querySelector("#modal");
+const modalContent = document.querySelector("#modalContent");
+const closeModal = document.querySelector("#closeModal");
 
 let movies = [];
 
-// LOAD JSON
 async function loadMovies() {
   try {
     const response = await fetch("data/movies.json");
     movies = await response.json();
     displayMovies(movies);
   } catch (error) {
-    console.error("Movie load error:", error);
+    console.error("Error loading movies:", error);
   }
 }
 
-// DISPLAY MOVIES
 function displayMovies(list) {
   grid.innerHTML = "";
 
   list.forEach(movie => {
     const card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("movie-card");
 
     card.innerHTML = `
       <img src="${movie.image}" alt="${movie.title} poster" loading="lazy">
       <h3>${movie.title}</h3>
       <p>${movie.year} • ${movie.genre}</p>
-      <button class="detailsBtn" data-id="${movie.id}">Details</button>
+      <button data-id="${movie.id}" class="details-btn">Details</button>
     `;
 
     grid.appendChild(card);
   });
 
-  document.querySelectorAll(".detailsBtn").forEach(btn => {
-    btn.addEventListener("click", openModal);
+  document.querySelectorAll(".details-btn").forEach(btn => {
+    btn.addEventListener("click", showModal);
   });
 }
 
-// OPEN MODAL
-function openModal(e) {
-  const movie = movies.find(m => m.id == e.target.dataset.id);
+function showModal(e) {
+  const id = e.target.dataset.id;
+  const movie = movies.find(m => m.id == id);
 
   modalContent.innerHTML = `
     <h2>${movie.title}</h2>
@@ -54,5 +53,9 @@ function openModal(e) {
 
   localStorage.setItem("lastMovieViewed", movie.title);
 }
+
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
 
 loadMovies();
